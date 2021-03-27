@@ -157,7 +157,7 @@ def get_content():
 def main():
     content = get_content()
     result = BDecode(content).parse()
-    result_json = json.dumps(result)
+    result_json = json.dumps(result, ensure_ascii=False)
     print(result_json)
 
 
